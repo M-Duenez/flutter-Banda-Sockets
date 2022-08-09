@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:band_names/pages/home.dart';
 import 'package:band_names/pages/status.dart';
-import 'package:provider/single_child_widget.dart';
+//import 'package:provider/single_child_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        initialRoute: 'status',
+        initialRoute: 'home',
         routes: {
           'home': (_) => HomeScreen(),
           'status': (_) => StatusScreen(),

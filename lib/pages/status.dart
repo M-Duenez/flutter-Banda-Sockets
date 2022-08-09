@@ -9,7 +9,22 @@ class StatusScreen extends StatelessWidget {
 
     return Scaffold(
       body: Center(
-        child: Text('Hola Mundo'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Estado de Servidor: ${socketService.serverStatus}'),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.message),
+        onPressed: () {
+          socketService.emitir('emitir-mensaje', {
+            'nombre': 'Flutter',
+            'mensaje': 'hola mundo f',
+            'mensaje2': 'aqui estoy f'
+          });
+        },
       ),
     );
   }
